@@ -71,8 +71,8 @@ while True:
     boxes = body_cascade.detectMultiScale(gray, 1.1, 3)
     detections = []
     for (x, y, w, h) in boxes:
-        # cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
-        cv2.circle(frame, ((x + w) - (w // 2), (y + h) - (h // 2)), 5, (0, 0, 255), -1)
+        cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        # cv2.circle(frame, ((x + w) - (w // 2), (y + h) - (h // 2)), 5, (0, 255, 0), -1)
         detections.append([x, y, w, h])
 
     points = tracker.update(detections)
