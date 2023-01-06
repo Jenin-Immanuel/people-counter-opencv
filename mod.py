@@ -13,7 +13,7 @@ class Point:
 
     
 
-class DirectionTrakcer:
+class DirectionTracker:
     end_point: Point = Point(335, 298)
 
     def __init__ (self, people: int = 0):
@@ -61,7 +61,7 @@ class DirectionTrakcer:
 body_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_upperbody.xml")
 cap = cv2.VideoCapture('video4.mp4')
 tracker: EuclideanDistTracker = EuclideanDistTracker()
-dt: DirectionTrakcer = DirectionTrakcer(500)
+dt: DirectionTracker = DirectionTracker(500)
 
 while True:
     _,  frame = cap.read()
